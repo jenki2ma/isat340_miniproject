@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<!-- Name: Matthew Jenkins and Ryan Bullesbach
+ ISAT 340
+ Section: 002
+-->
+<title> Profile Information </title>
+<h1><center> Profile Information <center></h1>
+
+<form action="" method ="post">  
+<fieldset> 
+<legend>Profile information:</legend> 
+<p> Please <strong>update</strong> your profile information on the following form<br>
+	<em> All fields are required and must contain valid information </em>
+ 
+<table Border = 5>
+<TR>
+	<TD> Member ID: </TD>
+	<TD><input type = "text" name="memberID" value="{{memberID}}" readonly /></TD> </TR>
+
+
+<TR>
+	<TD> First Name: </TD>
+	<TD>
+
+ <input type="text" name="firstname" value="{{firstname}}"/>  
+ 
+</TD></TR>
+<TR>
+	<TD> Last name:</TD>
+
+ <TD><input type="text" name="lastname" value="{{lastname}}"/>  </td></TR>
+ <TR>
+	<TD> Age:</TD>
+
+ <TD><input type="text" name="age" value="{{age}}"/>  </td></TR>
+ 
+<TR>
+	<TD> Email:</TD>
+	
+ <TD><input type= "text" name="email" value="{{email}}"/>
+  </TD></TR>
+
+<TR> 
+	<TD> <img src="{{url_for('static', filename= 'joe.jpg')}}" width='110' height='130'> </TD>
+
+
+
+
+	<TD><textarea name="bio" rows=4 cols = 50> </textarea></TD>
+	</TR>
+
+
+</table>
+{% if success %}
+<h3 style="color:magenta;"> Data successfully submitted to the database!</h3>
+{% endif %}
+<input type="submit" value="Click to Update"> 
+</fieldset>  
+</form> 
+<a href = "/view_all_celebs"> Click to view all of the celebrities </a>
+<BR><BR>
+
+<a href ="/view_one_celeb"> Click to view one celebrity </a>
+
+ 
+
